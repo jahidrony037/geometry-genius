@@ -23,9 +23,10 @@ function setInputValue(idName, area){
 
 function setResultInArea(idName,area){
     let lists = document.querySelectorAll('li');
+    
     const resultContainer = document.getElementById(idName);
     const createList = document.createElement('li');
-    createList.innerText= `${lists.length+1} Pentagon ${area.toFixed(2)} cm2`;
+    createList.innerText= `${lists.length+1}  ${area.toFixed(2)} cm2`;
     resultContainer.appendChild(createList);
 }
 

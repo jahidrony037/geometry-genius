@@ -1,4 +1,4 @@
- document.getElementById('rectangle-calculate').addEventListener('click', function() {
+ document.getElementById('rectangle-calculate').addEventListener('click', function(event) {
     const width = getInputValue('rect-width');
     const length = getInputValue('rect-length');
     const area = width * length;
@@ -7,6 +7,7 @@
         setResultInArea('calculation-result-container',area);
     }
     //console.log(area);
+    event.stopPropagation();
 
  })
 
@@ -23,9 +24,10 @@ function setInputValue(idName, area){
 
 function setResultInArea(idName,area){
     let lists = document.querySelectorAll('li');
+    
     const resultContainer = document.getElementById(idName);
     const createList = document.createElement('li');
-    createList.innerText= `${lists.length+1} Rectangle ${area.toFixed(2)} cm2`;
+    createList.innerText= `${lists.length+1}  ${area.toFixed(2)} cm2`;
     resultContainer.appendChild(createList);
 }
 

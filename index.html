@@ -38,6 +38,9 @@
       .pentagonColor {
         background-color: thistle;
       }
+      .ellipseColor {
+        background-color: bisque;
+      }
     </style>
 
     <title>geometry genius</title>
@@ -264,7 +267,7 @@
                 <img src="images/pentagon.png" alt="pentagon" />
               </figure>
               <div class="card-body items-center text-center mt-6">
-                <h2 class="card-title">Rhombus</h2>
+                <h2 class="card-title">Pentagon</h2>
                 <p>Area (A) = 0.5 x p x b</p>
                 <p>
                   p=
@@ -303,15 +306,51 @@
             </div>
           </div>
           <!-- Ellipse-Card -->
-          <div class="card card-compact bg-base-100 shadow-xl">
-            <figure>
-              <img src="images/ellipse.png" alt="ellipse" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+
+          <div
+            class="card justify-end card-compact bg-base-100 shadow-xl"
+            id="ellipse-container"
+          >
+            <div>
+              <figure>
+                <img src="images/ellipse.png" alt="ellipse" />
+              </figure>
+              <div class="card-body items-center text-center mt-6">
+                <h2 class="card-title">Ellipse</h2>
+                <p>Area (A) = &#8508;a b</p>
+                <p>
+                  a=
+                  <input
+                    type="text"
+                    name="width"
+                    id="ellipse-width"
+                    class="inline w-[40px] border-solid border-2 bg-[#F1F1F1] rounded outline-none"
+                    placeholder="width"
+                    required
+                  />
+                  cm b =
+                  <input
+                    type="text"
+                    name="length"
+                    id="ellipse-length"
+                    class="inline w-[40px] border-solid border-2 bg-[#F1F1F1] rounded outline-none"
+                    placeholder="length"
+                    required
+                  />
+                  cm
+                </p>
+                <p>Area: <span id="area-ellipse">0</span> cm <sup>2</sup></p>
+
+                <div
+                  class="mt-12 border-solid border-white w-full flex flex-end"
+                >
+                  <button
+                    class="bg-primary rounded-lg pt-4 pb-4 text-white text-xl cursor-pointer w-full"
+                    id="ellipse-calculate"
+                  >
+                    Calculate
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -319,14 +358,16 @@
         <!-- Area Calculation Container -->
         <div class="md:w-96 border-solid border-2 rounded-lg h-[454px]">
           <h3 class="text-3xl text-center mt-4 underline">Area Calculation</h3>
-          <ul id="calculation-result-container"></ul>
+          <ul id="calculation-result-container" class="text-center"></ul>
         </div>
       </div>
     </main>
   </body>
-  <script src="scripts/triangle-calculation.js"></script>
-  <script src="scripts/rectangle-calculation.js"></script>
-  <script src="scripts/parallelogram-calculation.js"></script>
-  <script src="scripts/rhombus-calculation.js"></script>
+
+  <script src="scripts/ellipse-calculate.js"></script>
   <script src="scripts/pentagon-calculate.js"></script>
+  <script src="scripts/rhombus-calculation.js"></script>
+  <script src="scripts/parallelogram-calculation.js"></script>
+  <script src="scripts/rectangle-calculation.js"></script>
+  <script src="scripts/triangle-calculation.js"></script>
 </html>
