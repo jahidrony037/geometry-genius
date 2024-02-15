@@ -32,6 +32,12 @@
       .parallelogramColor {
         background-color: darkcyan;
       }
+      .rhombusColor {
+        background-color: azure;
+      }
+      .pentagonColor {
+        background-color: thistle;
+      }
     </style>
 
     <title>geometry genius</title>
@@ -200,28 +206,99 @@
             </div>
           </div>
           <!-- Rhombus-Card -->
-          <div class="card card-compact bg-base-100 shadow-xl">
-            <figure>
-              <img src="images/rhombus.png" alt="rhombus" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+          <div
+            class="card justify-end card-compact bg-base-100 shadow-xl"
+            id="rhombus-container"
+          >
+            <div>
+              <figure>
+                <img src="images/rhombus.png" alt="rhombus" />
+              </figure>
+              <div class="card-body items-center text-center mt-6">
+                <h2 class="card-title">Rhombus</h2>
+                <p>Area (A) = 0.5x d <sub>1</sub> x d <sub>2</sub></p>
+                <p>
+                  d <sub>1</sub>=
+                  <input
+                    type="text"
+                    name="width"
+                    id="rhombus-width"
+                    class="inline w-[40px] border-solid border-2 bg-[#F1F1F1] rounded outline-none"
+                    placeholder="width"
+                    required
+                  />
+                  cm d <sub>2</sub>=
+                  <input
+                    type="text"
+                    name="length"
+                    id="rhombus-length"
+                    class="inline w-[40px] border-solid border-2 bg-[#F1F1F1] rounded outline-none"
+                    placeholder="length"
+                    required
+                  />
+                  cm
+                </p>
+                <p>Area: <span id="area-rhombus">0</span> cm <sup>2</sup></p>
+
+                <div
+                  class="mt-12 border-solid border-white w-full flex flex-end"
+                >
+                  <button
+                    class="bg-primary rounded-lg pt-4 pb-4 text-white text-xl cursor-pointer w-full"
+                    id="rhombus-calculate"
+                  >
+                    Calculate
+                  </button>
+                </div>
               </div>
             </div>
           </div>
           <!-- Pentagon-Card -->
-          <div class="card card-compact bg-base-100 shadow-xl">
-            <figure>
-              <img src="images/pentagon.png" alt="pentagon" />
-            </figure>
-            <div class="card-body">
-              <h2 class="card-title">Shoes!</h2>
-              <p>If a dog chews shoes whose shoes does he choose?</p>
-              <div class="card-actions justify-end">
-                <button class="btn btn-primary">Buy Now</button>
+
+          <div
+            class="card justify-end card-compact bg-base-100 shadow-xl"
+            id="pentagon-container"
+          >
+            <div>
+              <figure>
+                <img src="images/pentagon.png" alt="pentagon" />
+              </figure>
+              <div class="card-body items-center text-center mt-6">
+                <h2 class="card-title">Rhombus</h2>
+                <p>Area (A) = 0.5 x p x b</p>
+                <p>
+                  p=
+                  <input
+                    type="text"
+                    name="width"
+                    id="pentagon-width"
+                    class="inline w-[40px] border-solid border-2 bg-[#F1F1F1] rounded outline-none"
+                    placeholder="width"
+                    required
+                  />
+                  cm b =
+                  <input
+                    type="text"
+                    name="length"
+                    id="pentagon-length"
+                    class="inline w-[40px] border-solid border-2 bg-[#F1F1F1] rounded outline-none"
+                    placeholder="length"
+                    required
+                  />
+                  cm
+                </p>
+                <p>Area: <span id="area-pentagon">0</span> cm <sup>2</sup></p>
+
+                <div
+                  class="mt-12 border-solid border-white w-full flex flex-end"
+                >
+                  <button
+                    class="bg-primary rounded-lg pt-4 pb-4 text-white text-xl cursor-pointer w-full"
+                    id="pentagon-calculate"
+                  >
+                    Calculate
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -250,4 +327,6 @@
   <script src="scripts/triangle-calculation.js"></script>
   <script src="scripts/rectangle-calculation.js"></script>
   <script src="scripts/parallelogram-calculation.js"></script>
+  <script src="scripts/rhombus-calculation.js"></script>
+  <script src="scripts/pentagon-calculate.js"></script>
 </html>
